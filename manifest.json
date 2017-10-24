@@ -3,11 +3,6 @@
   "name": "Add okcamp",
   "version": "0.1",
   "description": "add gear from amazon to okcamp",
-  "browser_action": {
-    "default_popup": "index.html",
-    "default_icon": "icon.png",
-    "default_title": "title"
-  },
   "content_scripts": [
     {
       "matches": [
@@ -25,5 +20,9 @@
       "background.js"
     ],
     "persistent": false
+  },
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
   }
 }
