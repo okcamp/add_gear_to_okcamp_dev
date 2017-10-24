@@ -1,14 +1,29 @@
 {
-	"manifest_version":2,
-	"name": "chrome test",
-	"version": "0.1",
-	"browser_action": {
-		"default_popup": "index.html",
-		"default_icon": "icon.png",
-		"default_title": "title"
-	},
-
-	"background":{
-		"scripts":["background.js"]
-	}
+  "manifest_version":2,
+  "name": "Add okcamp",
+  "version": "0.1",
+  "description": "add gear from amazon to okcamp",
+  "browser_action": {
+    "default_popup": "index.html",
+    "default_icon": "icon.png",
+    "default_title": "title"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://www.amazon.co.jp/*",
+        "https://www.amazon.co.jp/*"
+      ],
+      "js": [
+        "script.js"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "background":{
+    "scripts":[
+      "background.js"
+    ],
+    "persistent": false
+  }
 }

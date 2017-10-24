@@ -1,1 +1,1 @@
-alert("background.js");
+console.log('Hello world');
