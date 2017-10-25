@@ -5,3 +5,30 @@ window.onload = function(){
   document.getElementById('weight').value = bk.params['weight'];
   document.getElementById('description').value = bk.params['description'];
 }
+
+window.addEventListener("load", function () {
+  function sendData() {
+    var XHR = new XMLHttpRequest();
+    var FD  = new FormData(form);
+
+    XHR.addEventListener("load", function(event) {
+      console.log(event.target.responseText);
+    });
+
+    XHR.addEventListener("error", function(event) {
+      console.log('Oups! Something goes wrong.');
+    });
+
+    XHR.open("GET", "http://localhost:3000/ja/api/sample/public.json");
+
+    XHR.send(FD);
+  }
+
+  var form = document.getElementById("add_okcamp_form");
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    sendData();
+  });
+});

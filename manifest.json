@@ -3,6 +3,10 @@
   "name": "Add okcamp",
   "version": "0.1",
   "description": "add gear from amazon to okcamp",
+  "permissions": [
+    "http://localhost:3000/",
+    "http://www.okcamp.me/"
+  ],
   "content_scripts": [
     {
       "matches": [
