@@ -1,27 +1,24 @@
 window.onload = function(){
-  var selectBox = {};
+  var bk = chrome.extension.getBackgroundPage();
 
-  var category_json = new XMLHttpRequest();
-  category_json.open("get", "http://localhost:3000/ja/api/categories", true);
-  category_json.onload = function(){
-    var json = JSON.parse(this.responseText);
-    for (var i=0; i<json.length; i++){
-      selectBox[json[i]['id']] = json[i]['name_ja']
-    }
-  }
-  category_json.send(null);
-
-  console.log(selectBox);
-
-  var select = document.getElementById('category_id');
-  for ( var i in selectBox ) {
+  var categorySelect = document.getElementById('category_id');
+  console.log(bk.categories);
+  for ( var i in bk.categories) {
       var option = document.createElement('option');
       option.setAttribute('value', i);
-      option.innerHTML = selectBox[i];
-      select.appendChild(option);
+      option.innerHTML = bk.categories[i];
+      categorySelect.appendChild(option);
   }
 
-  var bk = chrome.extension.getBackgroundPage();
+  var makerSelect = document.getElementById('maker_id');
+  console.log(bk.makers);
+  for ( var i in bk.makers) {
+      var option = document.createElement('option');
+      option.setAttribute('value', i);
+      option.innerHTML = bk.makers[i];
+      makerSelect.appendChild(option);
+  }
+
   document.getElementById('asin').value = bk.params['asin'];
   document.getElementById('title').value = bk.params['title'];
   document.getElementById('weight').value = bk.params['weight'];
