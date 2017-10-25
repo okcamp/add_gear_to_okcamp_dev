@@ -19,10 +19,10 @@ window.onload = function(){
       makerSelect.appendChild(option);
   }
 
-  document.getElementById('asin').value = bk.params['asin'];
-  document.getElementById('title').value = bk.params['title'];
+  document.getElementById('asin_ja').value = bk.params['asin'];
+  document.getElementById('title_ja').value = bk.params['title'];
   document.getElementById('weight').value = bk.params['weight'];
-  document.getElementById('description').value = bk.params['description'];
+  document.getElementById('description_ja').value = bk.params['description'];
 }
 
 window.addEventListener("load", function () {
