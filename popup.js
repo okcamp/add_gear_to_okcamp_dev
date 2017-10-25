@@ -19,7 +19,9 @@ window.addEventListener("load", function () {
       console.log('Oups! Something goes wrong.');
     });
 
-    XHR.open("GET", "http://localhost:3000/ja/api/sample/public.json");
+    XHR.open("POST", "http://localhost:3000/ja/api/sample/putsform.json");
+
+    XHR.setRequestHeader('ACCESS_TOKEN', '');
 
     XHR.send(FD);
   }
