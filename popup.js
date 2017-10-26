@@ -2,21 +2,19 @@ window.onload = function(){
   var bk = chrome.extension.getBackgroundPage();
 
   var categorySelect = document.getElementById('category_id');
-  console.log(bk.categories);
   for ( var i in bk.categories) {
-      var option = document.createElement('option');
-      option.setAttribute('value', i);
-      option.innerHTML = bk.categories[i];
-      categorySelect.appendChild(option);
+    var option = document.createElement('option');
+    option.setAttribute('value', i);
+    option.innerHTML = bk.categories[i];
+    categorySelect.appendChild(option);
   }
 
   var makerSelect = document.getElementById('maker_id');
-  console.log(bk.makers);
   for ( var i in bk.makers) {
-      var option = document.createElement('option');
-      option.setAttribute('value', i);
-      option.innerHTML = bk.makers[i];
-      makerSelect.appendChild(option);
+    var option = document.createElement('option');
+    option.setAttribute('value', i);
+    option.innerHTML = bk.makers[i];
+    makerSelect.appendChild(option);
   }
 
   document.getElementById('asin_ja').value = bk.params['asin'];
@@ -30,22 +28,25 @@ window.addEventListener("load", function () {
     var XHR = new XMLHttpRequest();
     var FD  = new FormData(form);
 
+    XHR.addEventListener("progress", function(event) {
+      document.getElementById('submit_button').value = '送信中';
+    });
     XHR.addEventListener("load", function(event) {
       console.log(event.target.responseText);
+      document.getElementById('submit_button').value = '登録しました';
     });
     XHR.addEventListener("error", function(event) {
-      console.log('Oups! Something goes wrong.');
+      alert('Error!');
+      // rollbarとかで検知させられないかね
     });
-    XHR.open("POST", "http://localhost:3000/ja/api/gear");
-    XHR.setRequestHeader('ACCESS_TOKEN', '003e7958e5da76c4c8b66b90aaf27d9f');
+    XHR.open("POST", "http://www.okcamp.me/ja/api/gear");
+    XHR.setRequestHeader('ACCESS_TOKEN', 'YOUR_ACCESS_TOKEN');
     XHR.send(FD);
   }
 
   var form = document.getElementById("add_okcamp_form");
-
   form.addEventListener("submit", function (event) {
     event.preventDefault();
-
     sendData();
   });
 });

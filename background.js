@@ -2,8 +2,13 @@ var params = {};
 var categories = {};
 var makers = {};
 
+// まずaccess_tokenがactiveなのかどうかを検証する
+
+// access_tokenが無効だった場合はログインをさせる
+
+// 実際のpopup.htmlに値を渡す
 var category_json = new XMLHttpRequest();
-category_json.open("get", "http://localhost:3000/ja/api/categories", true);
+category_json.open("get", "http://www.okcamp.me/ja/api/categories", true);
 category_json.onload = function(){
   console.log(this.responseText);
   var json = JSON.parse(this.responseText);
@@ -14,7 +19,7 @@ category_json.onload = function(){
 category_json.send(null);
 
 var maker_json = new XMLHttpRequest();
-maker_json.open("get", "http://localhost:3000/ja/api/makers", true);
+maker_json.open("get", "http://www.okcamp.me/ja/api/makers", true);
 maker_json.onload = function(){
   console.log(this.responseText);
   var json = JSON.parse(this.responseText);
@@ -23,6 +28,8 @@ maker_json.onload = function(){
   }
 }
 maker_json.send(null);
+
+// ここでメーカーとカテゴリーを正確じゃないにしても把握できるのか？
 
 chrome.runtime.onMessage.addListener(
   function(request, sender, sendResponse){
