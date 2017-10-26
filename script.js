@@ -1,10 +1,10 @@
 get_asin = document.getElementById("ASIN").value;
-get_title = document.title;
+get_title = document.getElementById('productTitle').innerText;
 
 if (document.getElementsByClassName('shipping-weight')) {
   get_weight = document.getElementsByClassName('shipping-weight')[0].children[1].innerHTML;
 } else {
-  get_weight = null
+  get_weight = null;
 }
 
 if (document.getElementById('productDescription')) {

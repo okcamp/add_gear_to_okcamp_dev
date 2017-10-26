@@ -37,7 +37,7 @@ window.addEventListener("load", function () {
       console.log('Oups! Something goes wrong.');
     });
     XHR.open("POST", "http://localhost:3000/ja/api/gear");
-    XHR.setRequestHeader('ACCESS_TOKEN', '0da7b4dc8d9eef855f40915a3831b2d7');
+    XHR.setRequestHeader('ACCESS_TOKEN', '003e7958e5da76c4c8b66b90aaf27d9f');
     XHR.send(FD);
   }
 
