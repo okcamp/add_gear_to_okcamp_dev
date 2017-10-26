@@ -1,9 +1,11 @@
 {
   "manifest_version":2,
   "name": "Add okcamp",
-  "version": "0.1",
+  "version": "0.2",
   "description": "add gear from amazon to okcamp",
   "permissions": [
+    "tabs",
+    "background",
     "http://localhost:3000/",
     "http://www.okcamp.me/"
   ],
@@ -15,8 +17,7 @@
       ],
       "js": [
         "script.js"
-      ],
-      "run_at": "document_end"
+      ]
     }
   ],
   "background":{
@@ -26,7 +27,6 @@
     "persistent": false
   },
   "browser_action": {
-    "default_popup": "popup.html",
     "default_icon": "icon.png"
   }
 }

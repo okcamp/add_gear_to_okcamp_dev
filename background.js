@@ -1,3 +1,7 @@
+chrome.browserAction.onClicked.addListener(function(tab) {
+	chrome.tabs.sendMessage(tab.id, "Action");
+});
+
 var params = {};
 var categories = {};
 var makers = {};
@@ -37,5 +41,6 @@ chrome.runtime.onMessage.addListener(
     params['title'] = request.title;
     params['weight'] = request.weight;
     params['description'] = request.description;
+    chrome.tabs.create({"url": "popup.html" });
   }
 );
