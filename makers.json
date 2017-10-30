@@ -1,276 +1,277 @@
-[{
-  "id": 1,
-  "name_ja": "コールマン",
-  "name_en": "Coleman"
-},
-{
-  "id": 2,
-  "name_ja": "ユニフレーム",
-  "name_en": "UNIFLAME"
-},
-{
-  "id": 3,
-  "name_ja": "キャプテンスタッグ",
-  "name_en": "CAPTAIN STAG"
-},
-{
-  "id": 4,
-  "name_ja": "アライテント",
-  "name_en": "ARAI TENT"
-},
-{
-  "id": 5,
-  "name_ja": "バンドック",
-  "name_en": "BUNDOK"
-},
-{
-  "id": 6,
-  "name_ja": "キャンパーズコレクション",
-  "name_en": "Campers Collection"
-},
-{
-  "id": 7,
-  "name_ja": "ドッペルギャンガー",
-  "name_en": "DOPPEL GANGER"
-},
-{
-  "id": 8,
-  "name_ja": "エディー・バウアー",
-  "name_en": "Eddie Bauer"
-},
-{
-  "id": 9,
-  "name_ja": "ヨーレイカ",
-  "name_en": "Eureka"
-},
-{
-  "id": 10,
-  "name_ja": "ジェントス",
-  "name_en": "GENTOS"
-},
-{
-  "id": 11,
-  "name_ja": "グレゴリー",
-  "name_en": "GREGORY"
-},
-{
-  "id": 12,
-  "name_ja": "ヒルバーグ",
-  "name_en": "HILLEBERG"
-},
-{
-  "id": 13,
-  "name_ja": "カリマー",
-  "name_en": "karrimor"
-},
-{
-  "id": 14,
-  "name_ja": "LLビーン",
-  "name_en": "L.L.Bean"
-},
-{
-  "id": 15,
-  "name_ja": "ロゴス",
-  "name_en": "LOGOS"
-},
-{
-  "id": 16,
-  "name_ja": "マムート",
-  "name_en": "MAMMUT"
-},
-{
-  "id": 17,
-  "name_ja": "モンテイン",
-  "name_en": "MONTANE"
-},
-{
-  "id": 18,
-  "name_ja": "モンベル",
-  "name_en": "montbell"
-},
-{
-  "id": 19,
-  "name_ja": "エムエスアール",
-  "name_en": "MSR"
-},
-{
-  "id": 20,
-  "name_ja": "ナパピリ",
-  "name_en": "NAPAPIJRI"
-},
-{
-  "id": 21,
-  "name_ja": "ノースイーグル",
-  "name_en": "North Eagle"
-},
-{
-  "id": 22,
-  "name_ja": "オクトス",
-  "name_en": "oxtos"
-},
-{
-  "id": 23,
-  "name_ja": "パタゴニア",
-  "name_en": "patagonia"
-},
-{
-  "id": 24,
-  "name_ja": "プリムス",
-  "name_en": "PRIMUS"
-},
-{
-  "id": 25,
-  "name_ja": "プロモンテ",
-  "name_en": "ProMonte"
-},
-{
-  "id": 26,
-  "name_ja": "ケシュア",
-  "name_en": "Quechua"
-},
-{
-  "id": 27,
-  "name_ja": "シナノ",
-  "name_en": "SINANO"
-},
-{
-  "id": 28,
-  "name_ja": "スノーピーク",
-  "name_en": "snow peak"
-},
-{
-  "id": 29,
-  "name_ja": "サウスフィールド",
-  "name_en": "SOUTH FIELD"
-},
-{
-  "id": 30,
-  "name_ja": "スポーツオーソリティ",
-  "name_en": "SPORTS AUTHORITY"
-},
-{
-  "id": 31,
-  "name_ja": "ノースフェイス",
-  "name_en": "THE NORTH FACE"
-},
-{
-  "id": 32,
-  "name_ja": "ティンバーランド",
-  "name_en": "Timberland"
-},
-{
-  "id": 33,
-  "name_ja": "アソビト",
-  "name_en": "asobito"
-},
-{
-  "id": 34,
-  "name_ja": "バークリバー",
-  "name_en": "BarkRiver"
-},
-{
-  "id": 35,
-  "name_ja": "ブッシュクラフト",
-  "name_en": "BushCraft"
-},
-{
-  "id": 36,
-  "name_ja": "チャムス",
-  "name_en": "CHUMS"
-},
-{
-  "id": 37,
-  "name_ja": "ダイソー",
-  "name_en": "DAISO"
-},
-{
-  "id": 38,
-  "name_ja": "エリッゼ",
-  "name_en": "ELLISSE"
-},
-{
-  "id": 39,
-  "name_ja": "エスビット",
-  "name_en": "Esbit"
-},
-{
-  "id": 40,
-  "name_ja": "ファイヤーボックス",
-  "name_en": "FIREBOX"
-},
-{
-  "id": 41,
-  "name_ja": "グラナイトギア",
-  "name_en": "GRANITE GEAR"
-},
-{
-  "id": 42,
-  "name_ja": "グローヒル",
-  "name_en": "GROWHILL"
-},
-{
-  "id": 43,
-  "name_ja": "ハイランダー",
-  "name_en": "Hilander"
-},
-{
-  "id": 44,
-  "name_ja": "イワタニ",
-  "name_en": "Iwatani"
-},
-{
-  "id": 45,
-  "name_ja": "ロッジ",
-  "name_en": "LODGE"
-},
-{
-  "id": 46,
-  "name_ja": "モーラナイフ",
-  "name_en": "Morakniv"
-},
-{
-  "id": 47,
-  "name_ja": "ノルディスク",
-  "name_en": "NORDISK"
-},
-{
-  "id": 48,
-  "name_ja": "小川キャンパル",
-  "name_en": "Ogawa"
-},
-{
-  "id": 49,
-  "name_ja": "オピネル",
-  "name_en": "OPINEL"
-},
-{
-  "id": 50,
-  "name_ja": "ソト",
-  "name_en": "SOTO"
-},
-{
-  "id": 51,
-  "name_ja": "スタンレー",
-  "name_en": "STANLEY"
-},
-{
-  "id": 52,
-  "name_ja": "テントファクトリー",
-  "name_en": "TENT FACTORY"
-},
-{
-  "id": 53,
-  "name_ja": "サーモス",
-  "name_en": "THERMOS"
-},
-{
-  "id": 54,
-  "name_ja": "トランギア",
-  "name_en": "trangia"
-},
-{
-  "id": 55,
-  "name_ja": "ビジョンピークス",
-  "name_en": "VISIONPEAKS"
-}
+[
+  {
+    "id": 1,
+    "name_ja": "コールマン",
+    "name_en": "Coleman"
+  },
+  {
+    "id": 2,
+    "name_ja": "ユニフレーム",
+    "name_en": "UNIFLAME"
+  },
+  {
+    "id": 3,
+    "name_ja": "キャプテンスタッグ",
+    "name_en": "CAPTAIN STAG"
+  },
+  {
+    "id": 4,
+    "name_ja": "アライテント",
+    "name_en": "ARAI TENT"
+  },
+  {
+    "id": 5,
+    "name_ja": "バンドック",
+    "name_en": "BUNDOK"
+  },
+  {
+    "id": 6,
+    "name_ja": "キャンパーズコレクション",
+    "name_en": "Campers Collection"
+  },
+  {
+    "id": 7,
+    "name_ja": "ドッペルギャンガー",
+    "name_en": "DOPPEL GANGER"
+  },
+  {
+    "id": 8,
+    "name_ja": "エディー・バウアー",
+    "name_en": "Eddie Bauer"
+  },
+  {
+    "id": 9,
+    "name_ja": "ヨーレイカ",
+    "name_en": "Eureka"
+  },
+  {
+    "id": 10,
+    "name_ja": "ジェントス",
+    "name_en": "GENTOS"
+  },
+  {
+    "id": 11,
+    "name_ja": "グレゴリー",
+    "name_en": "GREGORY"
+  },
+  {
+    "id": 12,
+    "name_ja": "ヒルバーグ",
+    "name_en": "HILLEBERG"
+  },
+  {
+    "id": 13,
+    "name_ja": "カリマー",
+    "name_en": "karrimor"
+  },
+  {
+    "id": 14,
+    "name_ja": "LLビーン",
+    "name_en": "L.L.Bean"
+  },
+  {
+    "id": 15,
+    "name_ja": "ロゴス",
+    "name_en": "LOGOS"
+  },
+  {
+    "id": 16,
+    "name_ja": "マムート",
+    "name_en": "MAMMUT"
+  },
+  {
+    "id": 17,
+    "name_ja": "モンテイン",
+    "name_en": "MONTANE"
+  },
+  {
+    "id": 18,
+    "name_ja": "モンベル",
+    "name_en": "montbell"
+  },
+  {
+    "id": 19,
+    "name_ja": "エムエスアール",
+    "name_en": "MSR"
+  },
+  {
+    "id": 20,
+    "name_ja": "ナパピリ",
+    "name_en": "NAPAPIJRI"
+  },
+  {
+    "id": 21,
+    "name_ja": "ノースイーグル",
+    "name_en": "North Eagle"
+  },
+  {
+    "id": 22,
+    "name_ja": "オクトス",
+    "name_en": "oxtos"
+  },
+  {
+    "id": 23,
+    "name_ja": "パタゴニア",
+    "name_en": "patagonia"
+  },
+  {
+    "id": 24,
+    "name_ja": "プリムス",
+    "name_en": "PRIMUS"
+  },
+  {
+    "id": 25,
+    "name_ja": "プロモンテ",
+    "name_en": "ProMonte"
+  },
+  {
+    "id": 26,
+    "name_ja": "ケシュア",
+    "name_en": "Quechua"
+  },
+  {
+    "id": 27,
+    "name_ja": "シナノ",
+    "name_en": "SINANO"
+  },
+  {
+    "id": 28,
+    "name_ja": "スノーピーク",
+    "name_en": "snow peak"
+  },
+  {
+    "id": 29,
+    "name_ja": "サウスフィールド",
+    "name_en": "SOUTH FIELD"
+  },
+  {
+    "id": 30,
+    "name_ja": "スポーツオーソリティ",
+    "name_en": "SPORTS AUTHORITY"
+  },
+  {
+    "id": 31,
+    "name_ja": "ノースフェイス",
+    "name_en": "THE NORTH FACE"
+  },
+  {
+    "id": 32,
+    "name_ja": "ティンバーランド",
+    "name_en": "Timberland"
+  },
+  {
+    "id": 33,
+    "name_ja": "アソビト",
+    "name_en": "asobito"
+  },
+  {
+    "id": 34,
+    "name_ja": "バークリバー",
+    "name_en": "BarkRiver"
+  },
+  {
+    "id": 35,
+    "name_ja": "ブッシュクラフト",
+    "name_en": "BushCraft"
+  },
+  {
+    "id": 36,
+    "name_ja": "チャムス",
+    "name_en": "CHUMS"
+  },
+  {
+    "id": 37,
+    "name_ja": "ダイソー",
+    "name_en": "DAISO"
+  },
+  {
+    "id": 38,
+    "name_ja": "エリッゼ",
+    "name_en": "ELLISSE"
+  },
+  {
+    "id": 39,
+    "name_ja": "エスビット",
+    "name_en": "Esbit"
+  },
+  {
+    "id": 40,
+    "name_ja": "ファイヤーボックス",
+    "name_en": "FIREBOX"
+  },
+  {
+    "id": 41,
+    "name_ja": "グラナイトギア",
+    "name_en": "GRANITE GEAR"
+  },
+  {
+    "id": 42,
+    "name_ja": "グローヒル",
+    "name_en": "GROWHILL"
+  },
+  {
+    "id": 43,
+    "name_ja": "ハイランダー",
+    "name_en": "Hilander"
+  },
+  {
+    "id": 44,
+    "name_ja": "イワタニ",
+    "name_en": "Iwatani"
+  },
+  {
+    "id": 45,
+    "name_ja": "ロッジ",
+    "name_en": "LODGE"
+  },
+  {
+    "id": 46,
+    "name_ja": "モーラナイフ",
+    "name_en": "Morakniv"
+  },
+  {
+    "id": 47,
+    "name_ja": "ノルディスク",
+    "name_en": "NORDISK"
+  },
+  {
+    "id": 48,
+    "name_ja": "小川キャンパル",
+    "name_en": "Ogawa"
+  },
+  {
+    "id": 49,
+    "name_ja": "オピネル",
+    "name_en": "OPINEL"
+  },
+  {
+    "id": 50,
+    "name_ja": "ソト",
+    "name_en": "SOTO"
+  },
+  {
+    "id": 51,
+    "name_ja": "スタンレー",
+    "name_en": "STANLEY"
+  },
+  {
+    "id": 52,
+    "name_ja": "テントファクトリー",
+    "name_en": "TENT FACTORY"
+  },
+  {
+    "id": 53,
+    "name_ja": "サーモス",
+    "name_en": "THERMOS"
+  },
+  {
+    "id": 54,
+    "name_ja": "トランギア",
+    "name_en": "trangia"
+  },
+  {
+    "id": 55,
+    "name_ja": "ビジョンピークス",
+    "name_en": "VISIONPEAKS"
+  }
 ]
