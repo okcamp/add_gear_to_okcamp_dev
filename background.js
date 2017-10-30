@@ -10,11 +10,13 @@ var makers = {};
 
 // access_tokenが無効だった場合はログインをさせる
 
+// TODO 将来的にはcategoriesとmakersはlocalStorageにキャッシュデータを保存しておいて高速化
+
 // 実際のpopup.htmlに値を渡す
 var category_json = new XMLHttpRequest();
-category_json.open("get", "http://www.okcamp.me/ja/api/categories", true);
+category_json.open("get", "./categories.json", true);
 category_json.onload = function(){
-  console.log(this.responseText);
+  // console.log(this.responseText);
   var json = JSON.parse(this.responseText);
   for (var i=0; i<json.length; i++){
     categories[json[i]['id']] = json[i]['name_ja']
@@ -23,9 +25,9 @@ category_json.onload = function(){
 category_json.send(null);
 
 var maker_json = new XMLHttpRequest();
-maker_json.open("get", "http://www.okcamp.me/ja/api/makers", true);
+maker_json.open("get", "./makers.json", true);
 maker_json.onload = function(){
-  console.log(this.responseText);
+  // console.log(this.responseText);
   var json = JSON.parse(this.responseText);
   for (var i=0; i<json.length; i++){
     makers[json[i]['id']] = json[i]['name_ja']
