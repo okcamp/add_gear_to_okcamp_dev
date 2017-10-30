@@ -21,6 +21,9 @@ window.onload = function(){
   document.getElementById('title_ja').value = bk.params['title'];
   document.getElementById('weight').value = bk.params['weight'];
   document.getElementById('description_ja').value = bk.params['description'];
+
+  document.getElementById("category_id").selectedIndex = localStorage.selectedCategory - 1;
+  document.getElementById("maker_id").selectedIndex = localStorage.selectedMaker - 1;
 }
 
 window.addEventListener("load", function () {
@@ -47,6 +50,8 @@ window.addEventListener("load", function () {
   var form = document.getElementById("add_okcamp_form");
   form.addEventListener("submit", function (event) {
     event.preventDefault();
+    localStorage.selectedCategory = document.getElementById("category_id").value
+    localStorage.selectedMaker = document.getElementById("maker_id").value
     sendData();
   });
 });
