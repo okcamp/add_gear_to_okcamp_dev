@@ -1,13 +1,13 @@
 {
   "manifest_version":2,
   "name": "Add okcamp",
-  "version": "0.2",
+  "version": "0.3",
   "description": "add gear from amazon to okcamp",
   "permissions": [
     "tabs",
     "background",
     "http://localhost:3000/",
-    "http://www.okcamp.me/"
+    "https://okcamp.me/"
   ],
   "content_scripts": [
     {

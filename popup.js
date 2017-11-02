@@ -42,8 +42,8 @@ window.addEventListener("load", function () {
       alert('Error!');
       // rollbarとかで検知させられないかね
     });
-    XHR.open("POST", "http://www.okcamp.me/ja/api/gear");
     XHR.setRequestHeader('ACCESS_TOKEN', 'YOUR_ACCESS_TOKEN');
+    XHR.open("POST", "https://okcamp.me/ja/api/gear");
     XHR.send(FD);
   }
 
