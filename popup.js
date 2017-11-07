@@ -42,8 +42,9 @@ window.addEventListener("load", function () {
       alert('Error!');
       // rollbarとかで検知させられないかね
     });
-    XHR.setRequestHeader('ACCESS_TOKEN', 'YOUR_ACCESS_TOKEN');
-    XHR.open("POST", "https://okcamp.me/ja/api/gear");
+    // ↓これ、この順番じゃないとダメなので注意
+    XHR.open("POST", "http://localhost:3000/ja/api/gear");
+    XHR.setRequestHeader('ACCESS_TOKEN', '3b9fdc4a783ddb29a20ca89658ff0a9b');
     XHR.send(FD);
   }
 

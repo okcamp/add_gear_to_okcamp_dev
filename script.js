@@ -5,7 +5,7 @@ chrome.extension.onMessage.addListener(function(request, sender, sendResponse) {
 });
 
 function getAmazonItemData(){
-  current_asin = location.href.match(/\/dp\/(.*?)\//)[1];
+  current_asin = location.href.match(/\/dp|gp\/product\/(.*?)\//)[1];
   current_title = document.getElementById('productTitle').innerText;
   current_head_title = document.title;
 
