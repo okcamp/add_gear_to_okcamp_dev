@@ -5,26 +5,45 @@ chrome.extension.onMessage.addListener(function(request, sender, sendResponse) {
 });
 
 function getAmazonItemData(){
-  get_asin = location.href.match(/\/dp\/(.*?)\//)[1];
-  get_title = document.getElementById('productTitle').innerText;
+  current_asin = location.href.match(/\/dp\/(.*?)\//)[1];
+  current_title = document.getElementById('productTitle').innerText;
+  current_head_title = document.title;
 
   if (document.getElementsByClassName('shipping-weight')) {
-    get_weight = document.getElementsByClassName('shipping-weight')[0].children[1].innerHTML;
+    current_weight = document.getElementsByClassName('shipping-weight')[0].children[1].innerHTML;
   } else {
-    get_weight = null;
+    current_weight = null;
+  }
+
+  if (document.getElementById('variation_color_name')) {
+    current_color = document.getElementById('variation_color_name').querySelector(".selection").innerText;
+  } else {
+    current_color = null;
+  }
+
+  if (document.getElementById('variation_style_name')) {
+    current_style = document.getElementById('variation_style_name').querySelector(".selection").innerText;
+  } else {
+    current_style = null;
   }
 
   if (document.getElementById('productDescription')) {
-    get_description = document.getElementById('productDescription').children[0].innerHTML;
+    current_description = document.getElementById('productDescription').children[0].innerHTML;
   } else {
-    get_description = null;
+    current_description = null;
   }
-  chrome.runtime.sendMessage({
-      'asin': get_asin,
-      'title': get_title,
-      'weight': get_weight,
-      'description': get_description
-    }, function(response){
-    console.log(get_asin, get_title, get_weight, get_description);
+
+  send_data = {
+      'asin': current_asin,
+      'title': current_title,
+      'head_title': current_head_title,
+      'weight': current_weight,
+      'current_color': current_color,
+      'current_style': current_style,
+      'description': current_description,
+    }
+
+  chrome.runtime.sendMessage(send_data, function(response){
+    console.log(send_data);
   });
 }

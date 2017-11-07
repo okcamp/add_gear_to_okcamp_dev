@@ -39,8 +39,10 @@ maker_json.send(null);
 
 chrome.runtime.onMessage.addListener(
   function(request, sender, sendResponse){
+    name_arr = [request.title, request.current_color, request.current_style]
+    mixed_title = name_arr.filter(function(e){return e}).join(' ')
     params['asin'] = request.asin;
-    params['title'] = request.title;
+    params['title'] = mixed_title;
     params['weight'] = request.weight;
     params['description'] = request.description;
     chrome.tabs.create({"url": "popup.html" });
