@@ -1,6 +1,6 @@
 {
   "manifest_version":2,
-  "name": "Add okcamp",
+  "name": "Add gear",
   "version": "0.3",
   "description": "add gear from amazon to okcamp",
   "permissions": [
