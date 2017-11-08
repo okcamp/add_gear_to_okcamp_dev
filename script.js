@@ -1,3 +1,13 @@
+var XHR = new XMLHttpRequest();
+var asin = location.href.match(/\/(dp|gp\/product)\/(.*?)\//)[2];
+
+XHR.addEventListener("load", function(event) {
+  console.log(event.target.responseText);
+  alert(event.target.responseText);
+});
+XHR.open("GET", "http://localhost:3000/ja/api/gears/check_asin?asin_ja=" + asin);
+XHR.send(null);
+
 chrome.extension.onMessage.addListener(function(request, sender, sendResponse) {
 	if (request == "Action") {
 		getAmazonItemData();
