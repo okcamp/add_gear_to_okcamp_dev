@@ -30,8 +30,8 @@ chrome.runtime.onMessage.addListener(
       // rollbarとかで検知させられないかね
     });
     // ↓これ、この順番じゃないとダメなので注意
-    XHR.open("POST", "http://localhost:3000/ja/api/gear");
-    XHR.setRequestHeader('ACCESS_TOKEN', '3a956a05a4f25ae777e9fd45226f0b86');
+    XHR.open("POST", "https://okcamp.me//ja/api/gear");
+    XHR.setRequestHeader('ACCESS_TOKEN', 'YOUR_ACCESS_TOKEN');
     XHR.setRequestHeader("Content-Type", "application/json")
     XHR.send(JSON.stringify({
       'asin_ja': request.asin,

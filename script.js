@@ -2,10 +2,13 @@ var XHR = new XMLHttpRequest();
 var asin = location.href.match(/\/(dp|gp\/product)\/(.*?)\//)[2];
 
 XHR.addEventListener("load", function(event) {
-  console.log(event.target.responseText);
-  alert(event.target.responseText);
+  var json = JSON.parse(event.target.responseText);
+  console.log(json['result']);
+  if(json['result'] == false){
+    alert('This ASIN is not exist to OKCAMP.')
+  }
 });
-XHR.open("GET", "http://localhost:3000/ja/api/gears/check_asin?asin_ja=" + asin);
+XHR.open("GET", "https://okcamp.me/ja/api/gears/existence_check?asin_ja=" + asin);
 XHR.send(null);
 
 chrome.extension.onMessage.addListener(function(request, sender, sendResponse) {
