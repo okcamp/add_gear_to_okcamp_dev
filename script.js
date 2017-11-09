@@ -1,3 +1,6 @@
+// TODO localStorageにメーカー定義ファイルを格納しておき、
+// そのメーカー定義の文字列に当てはまる商品のみalertだそうか
+
 var XHR = new XMLHttpRequest();
 var asin = location.href.match(/\/(dp|gp\/product)\/(.*?)\//)[2];
 
@@ -22,7 +25,7 @@ function getAmazonItemData(){
   current_title = document.getElementById('productTitle').innerText;
   current_head_title = document.title;
 
-  if (document.getElementsByClassName('shipping-weight')) {
+  if (document.getElementsByClassName('shipping-weight') > 0) {
     current_weight = document.getElementsByClassName('shipping-weight')[0].children[1].innerHTML;
   } else {
     current_weight = null;
