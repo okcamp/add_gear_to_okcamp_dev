@@ -25,7 +25,7 @@ function getAmazonItemData(){
   current_title = document.getElementById('productTitle').innerText;
   current_head_title = document.title;
 
-  if (document.getElementsByClassName('shipping-weight') > 0) {
+  if (document.getElementsByClassName('shipping-weight').length > 0) {
     current_weight = document.getElementsByClassName('shipping-weight')[0].children[1].innerHTML;
   } else {
     current_weight = null;
