@@ -11,32 +11,29 @@ var params = {};
 var categories = {};
 var makers = {};
 
-chrome.runtime.onMessage.addListener(
-  function(request, sender, sendResponse){
+chrome.runtime.onMessage.addListener(function(request, sender, sendResponse){
+  name_arr = [request.title, request.current_color, request.current_style]
+  mixed_title = name_arr.filter(function(e){return e}).join(' ')
 
-    name_arr = [request.title, request.current_color, request.current_style]
-    mixed_title = name_arr.filter(function(e){return e}).join(' ')
-
-    var XHR = new XMLHttpRequest();
-
-    XHR.addEventListener("progress", function(event) {
-      console.log('Submit data')
+  var XHR = new XMLHttpRequest();
+  XHR.addEventListener("load", function(event) {
+    chrome.runtime.sendMessage(function(tab){
+    	chrome.tabs.sendMessage(tab.id, "comp");
     });
-    XHR.addEventListener("load", function(event) {
-      alert(event.target.responseText);
-    });
-    XHR.addEventListener("error", function(event) {
-      alert(event.target.responseText);
-      // rollbarとかで検知させられないかね
-    });
-    // ↓これ、この順番じゃないとダメなので注意
-    XHR.open("POST", "https://okcamp.me//ja/api/gear");
     XHR.setRequestHeader('ACCESS_TOKEN', 'YOUR_ACCESS_TOKEN');
-    XHR.setRequestHeader("Content-Type", "application/json")
-    XHR.send(JSON.stringify({
-      'asin_ja': request.asin,
-      'title_ja': mixed_title,
-      'weight': request.weight
-    }))
-  }
-);
+    return true
+  });
+  XHR.addEventListener("error", function(event) {
+    sendResponse(event.target.responseText);
+    return true
+    // rollbarとかで検知させられないかね
+  });
+  // ↓これ、この順番じゃないとダメなので注意
+  XHR.open("POST", "https://okcamp.me//ja/api/gear");
+  XHR.setRequestHeader("Content-Type", "application/json")
+  XHR.send(JSON.stringify({
+    'asin_ja': request.asin,
+    'title_ja': mixed_title,
+    'weight': request.weight
+  }))
+});

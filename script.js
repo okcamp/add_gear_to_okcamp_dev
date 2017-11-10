@@ -8,16 +8,20 @@ XHR.addEventListener("load", function(event) {
   var json = JSON.parse(event.target.responseText);
   console.log(json['result']);
   if(json['result'] == false){
-    alert('This ASIN is not exist to OKCAMP.')
+    document.querySelector("body").style.backgroundColor = 'rgba(255, 130, 0, 0.3)';
   }
 });
 XHR.open("GET", "https://okcamp.me/ja/api/gears/existence_check?asin_ja=" + asin);
 XHR.send(null);
 
-chrome.extension.onMessage.addListener(function(request, sender, sendResponse) {
-	if (request == "Action") {
-		getAmazonItemData();
-	}
+chrome.extension.onMessage.addListener(function(request) {
+  if (request == "Action") {
+   getAmazonItemData();
+  }
+});
+
+chrome.runtime.onMessage.addListener(function(request){
+  document.querySelector("body").style.backgroundColor = '#fff';
 });
 
 function getAmazonItemData(){
@@ -60,6 +64,6 @@ function getAmazonItemData(){
     }
 
   chrome.runtime.sendMessage(send_data, function(response){
-    console.log(send_data);
+    console.log(response);
   });
 }
