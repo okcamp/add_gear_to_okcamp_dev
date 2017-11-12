@@ -28,7 +28,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse){
     // rollbarとかで検知させられないかね
   });
   // ↓これ、この順番じゃないとダメなので注意
-  XHR.open("POST", "http://localhost:3000/ja/api/gear");
+  XHR.open("POST", "https://okcamp.me/ja/api/gear");
   XHR.setRequestHeader('ACCESS_TOKEN', 'YOUR_ACCESS_TOKEN');
   XHR.setRequestHeader("Content-Type", "application/json")
   XHR.send(JSON.stringify({
