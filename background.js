@@ -1,10 +1,24 @@
-// TODO ログインまわりの処理を追加する
-// localStorageにaccess_tokenが無かったらログイン画面をpopup
-// もしあったならaccess_tokenがactiveなのかどうかを検証する
-// access_tokenが無効(期限切れ)だった場合は再度ログインをする
+if(localStorage.okcampAccessToken = ''){
+  var XHR = new XMLHttpRequest();
+  XHR.addEventListener("load", function(event) {
+    chrome.runtime.sendMessage(function(tab){
+    	chrome.tabs.sendMessage(tab.id, "comp");
+    });
+    return true
+  });
+  XHR.addEventListener("error", function(event) {
+    sendResponse(event.target.responseText);
+    return true
+  });
+  XHR.open("POST", "https://okcamp.me/api/user_sessions");
+  XHR.send({
+    // username, userpassword
+  })
+}
+alert(localStorage.foobar)
 
 chrome.browserAction.onClicked.addListener(function(tab) {
-	chrome.tabs.sendMessage(tab.id, "Action");
+  chrome.tabs.sendMessage(tab.id, "Action");
 });
 
 var params = {};
